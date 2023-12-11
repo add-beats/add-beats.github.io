@@ -1,92 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: 'Noto Sans', sans-serif
 }
 
-html,
-body {
-    height: 100%
+:root{
+    --aqua-color: #97FFF4;
+    --background-color: #04364A;
 }
 
-body {
-    display: grid;
-    place-items: center;
-    background: #AB47BC
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    padding: 0px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
 }
 
-.card {
-	color:#fff;
-    width: 350px;
-    border-radius: 10px;
-   background: linear-gradient(145deg, #9a40a9, #b74cc9);
-box-shadow:  20px 20px 60px #913ca0, 
-             -20px -20px 60px #c552d8;
-    border: none
+header nav{
+    margin-right: 150px;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.neo-button {
-    width: 40px;
-    height: 40px;
-    outline: 0 !important;
-    cursor: pointer;
-    color: #fff;
-    font-size: 15px;
-    border: none;
-    margin-right: 10px;
-    border-radius: 50%;
-background: linear-gradient(145deg, #9a40a9, #b74cc9);
-box-shadow: inset 20px 20px 60px #913ca0, 
-             inset -20px -20px 60px #c552d8;
+header nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
-.num{
-	
-	color:#eee !important;
+header nav a::before{
+    content: "";
+    width: 0px;
+    height 2.5px;
+    position: absolute;
+    bottom: -5px;
+    background-color: white;
+    transition: 0.3s;
 }
 
-.line{
-	color:#fff;
+header nav a:hover::before{
+    width: 50px;
 }
 
-.neo-button:active {
-   border-radius: 50%;
-background: #AB47BC;
-box-shadow:  28px 28px 57px #933da2, 
-             -28px -28px 57px #c351d6;
+header nav .active{
+    color: var(--aqua-color);
 }
 
-.fa-facebook {
-    color: #3b5998
+header nav .active::before{
+background-color: var(--aqua-color);
 }
 
-.fa-linkedin {
-    color: #0077b5
-}
-
-.fa-google {
-    color: #dc4e41
-}
-
-.fa-youtube {
-    color: #cd201f
-}
-
-.fa-twitter {
-    color: #55acee
-}
-
-.profile_button{
-	color:#fff;
-	padding:10px; 
-   border:none;
-   outline:0 !important;
-border-radius: 50px;
-background: #AB47BC;
-box-shadow:  28px 28px 57px #933da2, 
-             -28px -28px 57px #c351d6;
-	
+body{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: var(--background-color);
 }
