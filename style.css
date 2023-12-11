@@ -119,6 +119,7 @@ background-color: var(--aqua-color);
     font-size: 25px;
     cursor: pointer;
     transition: .2s;
+    color:#97FFF4;
 }
 
 .text-box .icon-box a i:hover{
